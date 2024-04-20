@@ -1,0 +1,8 @@
+displayName: "赤石工業"
+name: "akashiTech"
+author: "赤石 ゆな / Yuna Akashi"
+main: "akashiTech.AkashiTech"
+description: "For Mindustry v7 or higher. It's BETA. Official"
+version: 1.0
+minGameVersion: 145
+java: true
