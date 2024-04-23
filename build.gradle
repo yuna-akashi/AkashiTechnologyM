@@ -4,15 +4,14 @@ version '1.0'
 
 sourceSets.main.java.srcDirs = ["src"]
 
+
+targetCompatibility = 8
+sourceCompatibility = JavaVersion.VERSION_17
+
 repositories{
     mavenCentral()
     maven{ url "https://raw.githubusercontent.com/Zelaux/MindustryRepo/master/repository" }
     maven{ url 'https://www.jitpack.io' }
-}
-
-java{
-    targetCompatibility = 8
-    sourceCompatibility = JavaVersion.VERSION_17
 }
 
 ext{
@@ -30,6 +29,7 @@ allprojects{
 }
 
 dependencies{
+    compileOnly 'org.jetbrains:annotations:22.0.0'
     compileOnly "com.github.Anuken.Arc:arc-core:$mindustryVersion"
     compileOnly "com.github.Anuken.Mindustry:core:$mindustryVersion"
 
@@ -63,17 +63,6 @@ task jarAndroid{
             .execute(null, new File("$buildDir/libs")).waitForProcessOutput(System.out, System.err)
     }
 }
-
-//task jarAndroid{
-//    dependsOn "jar"
-//    doLast{
-//        //collect dependencies needed for desugaring
-//        def files = (configurations.compileClasspath.asList() + configurations.runtimeClasspath.asList() + [new File("E:/apps/Android/Sdk/platforms/android-30/android.jar")])
-//        def dependencies = files.collect{ "--classpath $it.path" }.join(" ")
-//
-//        doExec "E:/apps/Android/Sdk/build-tools/30.0.2/d8.bat $dependencies --min-api 14 --output ${project.archivesBaseName}Android.jar ${project.archivesBaseName}Desktop.jar"
-//    }
-//}
 
 jar{
     archiveFileName = "${base.archivesBaseName}Desktop.jar"
