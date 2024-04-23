@@ -18,6 +18,8 @@ public class AkashiTech extends Mod{
         return MOD_NAME + "-" + name;
     }
 
+    private static void dialog() {}
+
     public AkashiTech(){
         Log.info("Loaded AkashiIndustryMod constructor.");
 
@@ -39,8 +41,9 @@ public class AkashiTech extends Mod{
 
     @Override
     public void loadContent(){
-        {
-        }
+//        {
+//            //gh
+//        }
 
         Log.info("Loading some Akashi-Industry content.");
     }
