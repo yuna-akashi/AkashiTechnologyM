@@ -2,7 +2,7 @@ displayName: "赤石工業"
 name: "akashiTech"
 author: "赤石 ゆな / Yuna Akashi"
 main: "akashiTech.AkashiTech"
-description: "For Mindustry v7 or higher. It's Ver.RELEASE.OMEGA. Official"
+description: "For Mindustry v7 or higher. Support for Desktop. It's Ver.RELEASE.OMEGA."
 version: 1.0
 minGameVersion: 145
 java: true
