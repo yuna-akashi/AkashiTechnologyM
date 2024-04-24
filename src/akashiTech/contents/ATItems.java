@@ -12,11 +12,6 @@ public class ATItems extends Items {
      * For Serpulo
      */
 
-    public static Item tungastano;
-    /**
-     * For Erekir
-     */
-
     public static Item
             yunametal;
     /**
