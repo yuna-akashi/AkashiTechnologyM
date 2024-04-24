@@ -94,3 +94,16 @@ task deploy(type: Jar){
         }
     }
 }
+
+task desktopDeploy(type: Jar){
+    dependsOn jar
+    archiveFileName = "${base.archivesBaseName}.jar"
+
+    from{ [zipTree("$buildDir/libs/${project.archivesBaseName}Desktop.jar")] }
+
+    doLast{
+        delete{
+            delete "$buildDir/libs/${project.archivesBaseName}Desktop.jar"
+        }
+    }
+}
