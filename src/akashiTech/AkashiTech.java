@@ -1,5 +1,7 @@
 package akashiTech;
 
+import akashiTech.contents.ATBlocks;
+import akashiTech.contents.ATItems;
 import arc.*;
 import arc.util.*;
 import mindustry.game.EventType.*;
@@ -41,9 +43,10 @@ public class AkashiTech extends Mod{
 
     @Override
     public void loadContent(){
-//        {
-//            //gh
-//        }
+        {
+            ATItems.load();
+            ATBlocks.load();
+        }
 
         Log.info("Loading some Akashi-Industry content.");
     }
